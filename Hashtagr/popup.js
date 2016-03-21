@@ -55,7 +55,7 @@ chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
     var url = tabs[0].url;
     var title = tabs[0].title;
     var tweet_text = title;
-    rest_url = "http://http://178.62.70.247/hashtag/?url=" + url;
+    rest_url = "http://178.62.70.247/hashtag/?url=" + url;
     $.getJSON(rest_url, function(json) {
         if (json.Hashtags.length == 0) {
             $(".message").replaceWith("<h2 class='message'>Are you sure you're at 88 mph? <small>(I couldn't find anything)</small></h2>");
