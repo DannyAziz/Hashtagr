@@ -1,12 +1,23 @@
 {
-"name":"Medium Tweeter",
-"description":"http://www.domain.domain",
-"version":"1",
-"manifest_version":2,
-"content_scripts": [
-    {
-      "matches": ["http://*/*"],
-      "js": ["jquery.js", "popup.js"]
-    }
+  "manifest_version": 2,
+
+  "name": "Hashtagr",
+  "description": "This extension will read a page and generate hashtags based on the content! Another thing made by www.dannyaziz.com",
+  "version": "1.0",
+  "author": "Danny Aziz",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+     "js": ["jquery.js", "spin.min.js", "popup.js", "widgets.js"],
+     "matches": ["http://*/*", "https://*/*"]
+   }],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "https://ajax.googleapis.com/",
+    "<all_urls>"
   ]
 }

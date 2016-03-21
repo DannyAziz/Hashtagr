@@ -6,18 +6,30 @@
  -->
 <html>
   <head>
+    <meta name="twitter:widgets:csp" content="on">
     <title>Getting Started Extension's Popup</title>
     <style>
+      @font-face {
+      font-family: "PoiretOne";
+      src: url(PorietOne-Regular.tff);
+    }
       body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-family: "PoiretOne", "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
         font-size: 100%;
+        min-width: 400px;
+        min-height: 200px;
+        height: auto;
+        width: auto;
+        overflow: auto;
+        background: #F2F1EF;
+        color: #22313F;
+
       }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
+      h2 {
+        text-align: center;
+      }
+      .hashtags {
+        text-alight: center;
       }
     </style>
 
@@ -27,11 +39,17 @@
       -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
      -->
+    <script src="spin.min.js"></script>
+    <script src="jquery.js"></script>
     <script src="popup.js"></script>
   </head>
   <body>
-    <div id="status"></div>
-    <img id="image-result" hidden>
+    <h2 class="message">Hashtags for this page:</h2>
+    <div id="spin"></div>
+    <ul class="hashtags">
+
+    </ul>
+    <div class="buttons"></div>
   </body>
 </html>
 
