@@ -1,0 +1,55 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <meta name="twitter:widgets:csp" content="on">
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      @font-face {
+      font-family: "PoiretOne";
+      src: url(PorietOne-Regular.tff);
+    }
+      body {
+        font-family: "PoiretOne", "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+        min-width: 400px;
+        min-height: 200px;
+        height: auto;
+        width: auto;
+        overflow: auto;
+        background: #F2F1EF;
+        color: #22313F;
+
+      }
+      h2 {
+        text-align: center;
+      }
+      .hashtags {
+        text-alight: center;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="spin.min.js"></script>
+    <script src="jquery.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <h2 class="message">Hashtags for this page:</h2>
+    <div id="spin"></div>
+    <ul class="hashtags">
+
+    </ul>
+    <div class="buttons"></div>
+  </body>
+</html>
+
