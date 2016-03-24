@@ -3,7 +3,7 @@
 
   "name": "Hashtagr",
   "description": "This extension will read a page and generate hashtags based on the content! Another thing made by www.dannyaziz.com",
-  "version": "1.0",
+  "version": "1.5",
   "author": "Danny Aziz",
 
   "browser_action": {
@@ -11,7 +11,7 @@
     "default_popup": "popup.html"
   },
   "content_scripts": [{
-     "js": ["jquery.js", "spin.min.js", "popup.js", "widgets.js"],
+     "js": ["jquery.js", "spin.js", "popup.js", "widgets.js"],
      "matches": ["http://*/*", "https://*/*"]
    }],
   "permissions": [
